@@ -214,14 +214,14 @@ L2.append(0)
 L2.append("bye")
 L2.append(10)
 L2.append(30)
-L2.printList()
-# L2.print_reverse_List()
+L2.printList()              # -30 <--> -10 <--> hi <--> 0 <--> bye <--> 10 <--> 30 <--> None
+L2.print_reverse_List()     # 30 <--> 10 <--> bye <--> 0 <--> hi <--> -10 <--> -30 <--> None
 
 L2.delete_end()
-L2.printList()
+L2.printList()              # -30 <--> -10 <--> hi <--> 0 <--> bye <--> 10 <--> None
 
 L2.delete_start()
-L2.printList()
+L2.printList()              # -10 <--> hi <--> 0 <--> bye <--> 10 <--> None
 
 # L1.delete_bet(0)
 # L1.printList()
