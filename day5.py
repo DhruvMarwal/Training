@@ -157,17 +157,17 @@ class DLL:
             self.tail = newNode
 
 
-    # def delete_end(self):
-    #     currentNode = self.head
+    def delete_end(self):
+        if self.head == self.tail:
+            self.head = None
+            self.tail = None
 
-    #     while currentNode.next.next != None:
-    #         currentNode = currentNode.next
-
-    #     currentNode.next = None
+        self.tail = self.tail.prev
+        self.tail.next = None
     
     # def delete_bet(self, data):
     #     if self.head.data == data:
-    #         self.head = self.head.next
+    #         self.delete_start()
 
     #     currentNode = self.head
 
@@ -177,8 +177,14 @@ class DLL:
     #     if currentNode.next is not None:
     #         currentNode.next = currentNode.next.next
 
-    # def delete_start(self):
-    #     self.head = self.head.next
+    def delete_start(self):
+        if self.head == self.tail:
+            self.head = None
+            self.tail = None
+            return
+
+        self.head = self.head.next
+        self.head.prev = None
 
     def printList(self):
         currentNode = self.head
@@ -209,12 +215,13 @@ L2.append("bye")
 L2.append(10)
 L2.append(30)
 L2.printList()
-L2.print_reverse_List()
+# L2.print_reverse_List()
 
-# L1.delete_end()
-# L1.printList()
-# L1.delete_start()
-# L1.printList()
+L2.delete_end()
+L2.printList()
+
+L2.delete_start()
+L2.printList()
 
 # L1.delete_bet(0)
 # L1.printList()
