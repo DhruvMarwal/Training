@@ -78,7 +78,6 @@ class BST:
         return root
     
     def preOrder(self, root):
-
         if root is None:
             return
         
@@ -87,7 +86,6 @@ class BST:
         self.preOrder(root.right)
 
     def postOrder(self, root):
-
         if root is None:
             return
         
@@ -96,7 +94,6 @@ class BST:
         print(root.data, end = " ")
 
     def InOrder(self, root):
-
         if root is None:
             return
         
@@ -105,14 +102,12 @@ class BST:
         self.preOrder(root.right)
 
     def height(self, root):
-
         if root is None:
             return 0
 
         return 1 + max(self.height(root.left), self.height(root.right))
     
     def sumOfAllNodes(self, root):
-
         if root is None:
             return 0
         
@@ -122,7 +117,6 @@ class BST:
         return r_sum + l_sum + root.data
         
     def countnumberOfNodes(self, root):
-
         if root is None:
             return 0
         
